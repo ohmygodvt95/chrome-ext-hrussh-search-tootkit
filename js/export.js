@@ -1,4 +1,9 @@
-$('#pagelet_rhc_footer').append("<hr><button class=\"hrussh-btn\">Export Data</button>");
+$('#pagelet_rhc_footer').append("<hr><button class=\"hrussh-btn\">Export Data<span><span></button>");
+
+$(window).scroll(function(event){
+   $('.hrussh-btn span').text('(' + $('div._pac').length +')');
+});
+
 function datenum(v, date1904) {
 	if(date1904) v+=1462;
 	var epoch = Date.parse(v);
@@ -84,6 +89,7 @@ $(document).on('click', '.hrussh-btn', function() {
 		
 
 		/* the saveAs call downloads a file on the local machine */
-		saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), "result.xlsx");
+		var time = new Date().toLocaleTimeString();
+		saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), time +"-data.xlsx");
 	}
 });

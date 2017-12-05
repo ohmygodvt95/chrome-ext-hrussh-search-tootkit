@@ -1,12 +1,17 @@
 {
   "manifest_version": 2,
-  "name": "FB - Search group export result",
-  "description": "This extension allows the user to export fb search result",
+  "name": "FB - Search FB group data export",
+  "description": "This extension allows the user to export fb group search data",
   "version": "1.0",
   "browser_action": {
     "default_icon": "img/icon.png",
     "default_popup": "html/popup.html",
-    "default_title": "Click here!"
+    "default_title": "Seach and export FB group data!"
+  },
+  "icons": { 
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png" 
   },
   "permissions": [
     "activeTab",

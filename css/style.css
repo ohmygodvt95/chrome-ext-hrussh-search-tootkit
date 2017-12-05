@@ -1,4 +1,5 @@
 .hrussh-btn {
+	transition: 0.5s;
 	width: 100%;
 	height: 50px;
 	text-align: center;
@@ -8,4 +9,9 @@
 	border-radius: 5px;
 	box-shadow: 0 0 3px #000;
 	cursor: pointer;
+	font-size: 2em;
+}
+
+.hrussh-btn:hover {
+	font-weight: bold;
 }
